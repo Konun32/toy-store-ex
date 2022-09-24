@@ -40,6 +40,17 @@
   }
 }
 
+@mixin AdaptivValue($property, $startSize, $minSize, $maxW, $minWidth) {
+  $addSize: $startSize - $minSize;
+  #{$property}: $startSize + px;
+  @media (min-width: #{$minWidth + px}) and (max-width: #{$maxW + px}) {
+    #{$property}: calc(#{$minSize+px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$maxW - $minWidth}));
+  }
+  @media (max-width: #{$minWidth + px}) {
+    #{$property}: $minSize + px;
+  }
+}
+
 // Псевдо элементы
 @mixin pseudo($display: block, $pos: absolute, $content: ''){
   content: $content;
