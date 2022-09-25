@@ -77,3 +77,21 @@ window.onscroll = function(ev) {
 		}
 	}
 };
+
+//stocks
+let buttons = document.querySelectorAll('.stocks__btn');
+if (buttons.length > 0) {
+	buttons.forEach(btn => {
+		btn.addEventListener("click", onButtonClick);
+	});
+	function onButtonClick(e) {
+		let btn = e.target;
+		let button = btn.parentElement;
+		let text = button.previousElementSibling;
+		let hidden = text.lastElementChild;
+		let points = text.firstElementChild;
+		button.classList.toggle('_act');
+		points.classList.toggle('stocks__hidden');
+		hidden.classList.toggle('stocks__hidden');
+	}
+}
