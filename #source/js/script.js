@@ -7,3 +7,73 @@ $(document).ready(function(){
 		slidesToShow: 1,
 	});
 });
+
+//menu
+const iconMenu = document.querySelector('.menu__icon');
+const menuBody = document.querySelector('.menu__body');
+const links = document.querySelectorAll('.menu__link');
+if (iconMenu) {
+	iconMenu.addEventListener("click", function(e){
+		document.body.classList.toggle('_lock');
+		iconMenu.classList.toggle('_active');
+		menuBody.classList.toggle('_active');
+	})
+}
+
+//Прокрутка при клике
+const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
+if (menuLinks.length > 0) {
+	menuLinks.forEach(menuLink => {
+		menuLink.addEventListener("click", onMenuLinkClick);
+	});
+
+	function onMenuLinkClick(e) {
+		const menuLink = e.target;
+		if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
+			const gotoBlock = document.querySelector(menuLink.dataset.goto);
+			const gotoBlockValue = gotoBlock.getBoundingClientRect().top + window.pageYOffset;
+
+			if (iconMenu.classList.contains('_active')) {
+				document.body.classList.remove('_lock');
+				iconMenu.classList.remove('_active');
+				menuBody.classList.remove('_active');
+			}
+
+			window.scrollTo({
+				top: gotoBlockValue,
+				behavior: "smooth"
+			});
+			e.preventDefault();
+		}
+	}
+}
+
+//header
+const header = document.getElementsByClassName('header')[0];
+let logoF = document.getElementsByClassName('logoF')[0];
+let logoS = document.getElementsByClassName('logoS')[0];
+window.onscroll = function(ev) {
+	if (window.pageYOffset == 0) {
+		
+		if (!logoF.classList.contains('logo-none')) {
+			logoF.classList.add('logo-none');
+		}
+		if (logoS.classList.contains('logo-none')) {
+			logoS.classList.remove('logo-none');
+		}
+		if (header.classList.contains('header-scroll')) {
+			header.classList.remove('header-scroll');
+		}
+	} else {
+		
+		if (!logoS.classList.contains('logo-none')) {
+			logoS.classList.add('logo-none');
+		}
+		if (logoF.classList.contains('logo-none')) {
+			logoF.classList.remove('logo-none');
+		}
+		if (!header.classList.contains('header-scroll')) {
+			header.classList.add('header-scroll');
+		}
+	}
+};
