@@ -441,7 +441,7 @@
 		@include AdaptivValue(gap, 62, 30, 1000, 930);
 		margin-left: auto;
 		&:not(:last-child) {
-			margin-bottom: 100px;
+			margin-bottom: 200px;
 		}
 	}
 	&__square {
@@ -468,6 +468,7 @@
 	}
 	&__img {
 		position: absolute;
+		z-index: 5;
 		transform: translate(-50%, -50%);
 		top: 50%;
 		left: 50%;
@@ -545,6 +546,17 @@
 				left: auto;
 				right: 35px;
 			}
+			&__opacity {
+				transform: translate(-50%, -50%);
+				left: 50%;
+			}
+			&__move {
+				animation: Move1 0.8s 1 linear;
+				top: 90%;
+				right: -15%;
+				left: auto;
+				opacity: 1;
+			}
 		}
 	}
 	&:nth-child(2) {
@@ -552,18 +564,56 @@
 			&__square {
 				background: #822EFF;
 			}
+			&__inner-square {
+				background: #9249FF;
+			}
 			&__img {
 				transform: translate(0, 0);
 				top: auto;
 				left: -45px;
 				bottom: -45px;
+				transition: 0.8s all ease 0.1s;
 			}
+			&__opacity1 {
+				transform: translate(0, -50%);
+				left: 8.16%;
+			}
+			&__opacity2 {
+				transform: translate(50%, 0);
+				right: 0;
+				top: 10.26%;
+			}
+			&__move {
+				animation: Move2 1s 1 linear;
+				left: 20%;
+				top: 100%;
+			}
+		}
+		&._activeI .stocks__img {
+			transform: translate(35%, 0);
+			transition: 0.8s all ease 0.1s;
 		}
 	}
 	&:nth-child(3) {
 		& .stocks {
 			&__square {
 				background: #7214FF;
+			}
+			&__inner-square {
+				background: #8330FF;
+			}
+			&__opacity1 {
+				transform: translate(-30%, -30%);
+			}
+			&__opacity2 {
+				transform: translate(0, 39%);
+				left: 13.684%;
+				bottom: 0;
+			}
+			&__move {
+				animation: Move3 1s 1 linear;
+				right: -15%;
+				top: 5%;
 			}
 		}
 	}
@@ -572,6 +622,23 @@
 			&__square {
 				background: #6000F0;
 			}
+			&__inner-square {
+				background: #7519FF;
+			}
+			&__opacity {
+				left: 3.38%;
+				bottom: 14.41%;
+			}
+			&__move1 {
+				animation: Move4 1s 1 linear 0.2;
+				bottom: 70%;
+				left: 93%;
+			}
+			&__move2 {
+				animation: Move5 2s 1 linear 0.2;
+				top: 95%;
+				right: 90%;
+			}
 		}
 	}
 	&:nth-child(5) {
@@ -579,13 +646,115 @@
 			&__square {
 				background: #5700DA;
 			}
+			&__inner-square {
+				background: #6600FF;
+			}
 			&__img {
 				transform: translate(0, 0);
 				top: auto;
 				left: -66px;
 				bottom: -45px;
 			}
+			&__opacity1 {
+				transform: translate(-100%, 0);
+				left: -5.52%;
+				top: 30%;
+			}
+			&__opacity2 {
+				transform: translate(30%, 0);
+				right: 0;
+				bottom: -28.16%;
+			}
+			&__move {
+				animation: Move6 1s 1 linear 0.2;
+				right: 0;
+				top: -20%;
+			}
 		}
+		&._activeI .stocks__img {
+			transform: translate(25%, 0);
+			transition: 0.8s all ease 0.1s;
+		}
+	}
+}
+@keyframes Move1{
+	0% {
+		top: 55%;
+		right: 103.35%;
+		opacity: 0.3;
+	}
+	100% {
+		top: 90%;
+		right: -15%;
+		left: auto;
+		opacity: 1;
+	}
+}
+@keyframes Move2{
+	0% {
+		top: 35%;
+		left: -35%;
+	}
+	100% {
+		left: 20%;
+		top: 100%;
+	}
+}
+@keyframes Move3{
+	0% {
+		right: 105%;
+		top: 60%;
+		opacity: 0.3;
+	}
+	100% {
+		right: -15%;
+		top: 5%;
+		opacity: 1;
+	}
+}
+@keyframes Move4{
+	0% {
+		bottom: 100%;
+		left: 0;
+		opacity: 0.3;
+	}
+	100% {
+		bottom: 70%;
+		left: 93%;
+		opacity: 1;
+	}
+}
+@keyframes Move5{
+	0% {
+		top: -16%;
+		right: 90%;
+		opacity: 0.3;
+	}
+	25% {
+		right: 200%;
+	}
+	50% {
+		right: 90%;
+	}
+	75% {
+		right: 200%;
+	}
+	100% {
+		top: 95%;
+		right: 90%;
+		opacity: 1;
+	}
+}
+@keyframes Move6{
+	0% {
+		right: 100%;
+		top: 60%;
+		opacity: 0.3;
+	}
+	100% {
+		right: 0;
+		top: -20%;
+		opacity: 1;
 	}
 }
 ._act {
@@ -599,6 +768,20 @@
 		transform: rotate(0);
 	}
 }
+.move {
+	position: absolute;
+	z-index: 6;
+}
+.opacity {
+	position: absolute;
+	z-index: 2;
+	opacity: 0;
+	transition: 0.6s all ease 0.1s;
+}
+._activeI .opacity {
+	opacity: 1;
+	transition: 0.6s all ease 0.1s;
+}
 @media (max-width: 930px) {
 	.stocks {
 		&__wrap {
@@ -608,6 +791,11 @@
 			font-size: 46px;
 			&:not(:last-child) {
 				margin-bottom: 50px;
+			}
+		}
+		&__item {
+			&:not(:last-child) {
+				margin-bottom: 100px;
 			}
 		}
 		&__square {
