@@ -716,7 +716,7 @@ h1, h2, h3, h4, h5, h6 {
           transform: translate(-50%, -50%);
   left: 50%;
 }
-.stocks__item:nth-child(1) .stocks__move {
+.stocks__item:nth-child(1)._activeI .stocks__move {
   -webkit-animation: Move1 0.8s 1 linear;
           animation: Move1 0.8s 1 linear;
   top: 90%;
@@ -750,7 +750,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   top: 10.26%;
 }
-.stocks__item:nth-child(2) .stocks__move {
+.stocks__item:nth-child(2)._activeI .stocks__move {
   -webkit-animation: Move2 1s 1 linear;
           animation: Move2 1s 1 linear;
   left: 20%;
@@ -778,7 +778,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 13.684%;
   bottom: 0;
 }
-.stocks__item:nth-child(3) .stocks__move {
+.stocks__item:nth-child(3)._activeI .stocks__move {
   -webkit-animation: Move3 1s 1 linear;
           animation: Move3 1s 1 linear;
   right: -15%;
@@ -794,15 +794,15 @@ h1, h2, h3, h4, h5, h6 {
   left: 3.38%;
   bottom: 14.41%;
 }
-.stocks__item:nth-child(4) .stocks__move1 {
-  -webkit-animation: Move4 1s 1 linear 0.2;
-          animation: Move4 1s 1 linear 0.2;
+.stocks__item:nth-child(4)._activeI .stocks__move1 {
+  -webkit-animation: Move4 1s 1 linear;
+          animation: Move4 1s 1 linear;
   bottom: 70%;
   left: 93%;
 }
-.stocks__item:nth-child(4) .stocks__move2 {
-  -webkit-animation: Move5 2s 1 linear 0.2;
-          animation: Move5 2s 1 linear 0.2;
+.stocks__item:nth-child(4)._activeI .stocks__move2 {
+  -webkit-animation: Move5 2s 1 linear;
+          animation: Move5 2s 1 linear;
   top: 95%;
   right: 90%;
 }
@@ -831,9 +831,9 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   bottom: -28.16%;
 }
-.stocks__item:nth-child(5) .stocks__move {
-  -webkit-animation: Move6 1s 1 linear 0.2;
-          animation: Move6 1s 1 linear 0.2;
+.stocks__item:nth-child(5)._activeI .stocks__move {
+  -webkit-animation: Move6 1s 1 linear;
+          animation: Move6 1s 1 linear;
   right: 0;
   top: -20%;
 }
@@ -1025,14 +1025,14 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   z-index: 2;
   opacity: 0;
-  -webkit-transition: 0.6s all ease 0.1s;
-  transition: 0.6s all ease 0.1s;
+  -webkit-transition: 0.8s all ease 0.1s;
+  transition: 0.8s all ease 0.1s;
 }
 
 ._activeI .opacity {
   opacity: 1;
-  -webkit-transition: 0.6s all ease 0.1s;
-  transition: 0.6s all ease 0.1s;
+  -webkit-transition: 0.8s all ease 0.1s;
+  transition: 0.8s all ease 0.1s;
 }
 
 @media (max-width: 930px) {
