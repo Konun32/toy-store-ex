@@ -72,7 +72,25 @@
 			</div>
 		</header>
 		<main class="page">
-			<section class="page__main-block"></section>
+			<section class="page__main-block main-block">
+				<div class="main-block__container _container">
+					<div class="main-block__wrap">
+						<h1 class="main-block__title">Topson</h1>
+						<h2 class="main-block__subtitle">Loyalty programs</h2>
+						<p class="main-block__text">Мы создаем яркие акции<br>лояльности с игрушками</p>
+					</div>
+					<picture class="main-block__boy">
+						<source srcset="img/main-block/boy3.png" media="(max-width: 500px)">
+						<source srcset="img/main-block/boy2.png" media="(max-width: 800px)">
+						<img src="img/main-block/boy.png" alt="main-block">
+					</picture>
+					<picture class="main-block__vector">
+						<source srcset="img/main-block/Vector3.png" media="(max-width: 410px)">
+						<source srcset="img/main-block/Vector2.png" media="(max-width: 800px)">
+						<img src="img/main-block/Vector.png" alt="main-block">
+					</picture>
+				</div>
+			</section>
 			<section class="page__about about">
 				<div class="about__container _container">
 					<div class="about__wrap">
@@ -88,6 +106,55 @@
 							<div class="about__text-block">
 								<h2 class="about__title">О нас</h2>
 								<p class="about__text">Мы создаем акции лояльности для продуктовых сетей. Взаимодействуя с брендами и ретейлерами мы помогаем сетям увеличивать выручку и лояльность среди своих покупателей. Мы сами производим игрушки и вложения, поэтому знаем особенности этого рынка</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page__mechanics mechanics">
+				<div class="mechanics__container _container">
+					<div class="mechanics__wrap">
+						<div class="mechanics__body">
+							<h2 class="mechanics__title">Механика акции</h2>
+							<div class="mechanics__subtitle">Акции лояльности с игрушкой состоят из нескольких элементов</div>
+							<div class="mechanics__marketing marketing">
+								<div class="marketing__item">Диджитал<br>маркетинг</div>
+								<div class="marketing__item marketing__item_promo">
+									<!--<div class="marketing__img">
+										<img src="img/mechanics/Leo.png" alt="">
+									</div>-->
+									<picture class="marketing__img">
+										<source srcset="img/mechanics/Leo.png" media="(max-width: 375px)">
+										<source srcset="img/mechanics/Leo.png" media="(max-width: 767px)">
+										<img src="img/mechanics/Leo.png" alt="Leo">
+									</picture>
+									<div class="marketing__text">Промотовар</div>
+									<img src="img/mechanics/background.png" alt="" class="marketing__background">
+								</div>
+								<div class="marketing__item">Внутренний<br>маркетинг сети</div>
+							</div>
+						</div>
+						<div class="mechanics__approach approach">
+							<h3 class="approach__title">Мы предлагаем гибкий подход</h3>
+							<div class="approach__services">
+								<div class="approach__service">
+									<p class="approach__text">Вы можете заказать у нас только игрушки с доставкой до вашей локации, взяв маркетинг на себя</p>
+									<img src="img/mechanics/map.png" alt="" class="approach__img">
+								</div>
+								<div class="approach__service">
+									<p class="approach__text">Если же вам нужна помощь в продвижении, то мы окажем комплексную услугу: производство промо товаров и маркетинг</p>
+									<div class="approach__lower-block">
+										<p class="approach__experience">Наша команда обладает большим опытом продвижения таких брендов как Вконтакте, AliExpress, Делимобиль. Мы можем:</p>
+										<ul class="approach__list">
+											<li class="approach__item">Создать для вас сайт</li>
+											<li class="approach__item">Создать OLV</li>
+											<li class="approach__item">Запустить локальную и таргетированную рекламу</li>
+											<li class="approach__item">Придумать джинглы</li>
+											<li class="approach__item">и многое другое...</li>
+										</ul>
+									</div>
+									<img src="img/mechanics/rocket.png" alt="" class="approach__background">
+								</div>
 							</div>
 						</div>
 					</div>
@@ -124,27 +191,13 @@
 						</ul>
 						<div class="example__body">
 							<div class="example__slider">
-								<!--<div class="example__slide">
-									<img src="img/example/01.png" alt="example">
-								</div>
-								<div class="example__slide">
-									<img src="img/example/02.png" alt="example">
-								</div>
-								<div class="example__slide">
-									<img src="img/example/03.png" alt="example">
-								</div>
-								<div class="example__slide">
-									<img src="img/example/04.png" alt="example">
-								</div>
-								<div class="example__slide">
-									<img src="img/example/05.png" alt="example">
-								</div>
-								<div class="example__slide">
-									<img src="img/example/06.png" alt="example">
-								</div>
-								<div class="example__slide">
-									<img src="img/example/07.png" alt="example">
-								</div>-->
+								<img src="img/example/01.png" alt="example">
+								<img src="img/example/02.png" alt="example">
+								<img src="img/example/03.png" alt="example">
+								<img src="img/example/04.png" alt="example">
+								<img src="img/example/05.png" alt="example">
+								<img src="img/example/06.png" alt="example">
+								<img src="img/example/07.png" alt="example">
 							</div>
 						</div>
 						
@@ -155,9 +208,16 @@
 				<div class="license__container _container">
 					<div class="license__wrap">
 						<div class="license__body">
-							<div class="license__img">
-								<img src="img/license/01.jpg" alt="">
-							</div>
+							<picture class="license__img">
+								<source srcset="img/license/03.jpg" media="(max-width: 500px)">
+								<source srcset="img/license/02.jpg" media="(max-width: 767px)">
+								<img src="img/license/01.jpg" alt="license">
+							</picture>
+							<picture class="license__boy">
+								<source srcset="img/license/boy3.png" media="(max-width: 435px)">
+								<source srcset="img/license/boy2.png" media="(max-width: 900px)">
+								<img src="img/license/boy.png" alt="license">
+							</picture>
 							<div class="license__text-block">
 								<h2 class="license__title about__title">Использование лицензий</h2>
 								<p class="license__text about__text">Имеем большой опыт проектной работы с ведущими мировыми правообладателями. Знаем большинство крупнейших лицензиатов на российском рынке и поможем вам в выборе лицензии. Расскажем о плюсах и минусах работы с правообладателями</p>

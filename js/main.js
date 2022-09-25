@@ -1,1 +1,1 @@
-$(document).ready((function(){$(".example__slider").slick({arrows:!0,dots:!0,centerMode:!0,slidesToShow:1})}));
+$(document).ready((function(){$(".example__slider").slick({arrows:!0,dots:!1,centerMode:!0,slidesToShow:1})}));
