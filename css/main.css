@@ -1088,6 +1088,10 @@ h1, h2, h3, h4, h5, h6 {
     left: auto;
     right: 26px;
   }
+  .stocks__item:nth-child(1) .stocks__opacity {
+    width: 100px;
+    height: 48px;
+  }
   .stocks__item:nth-child(2) .stocks__img {
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
@@ -1113,6 +1117,115 @@ h1, h2, h3, h4, h5, h6 {
   }
   .stocks__text-title:not(:last-child) {
     margin-bottom: 15px;
+  }
+
+  .stocks__item:nth-child(1)._activeI .stocks__move {
+    -webkit-animation: move1 0.8s 1 linear;
+            animation: move1 0.8s 1 linear;
+    top: 80%;
+    right: -15%;
+    left: auto;
+    opacity: 1;
+  }
+  .stocks__item:nth-child(2)._activeI .stocks__move {
+    -webkit-animation: move2 1s 1 linear;
+            animation: move2 1s 1 linear;
+    left: 25%;
+    top: 78%;
+  }
+  .stocks__item:nth-child(4)._activeI .stocks__move2 {
+    -webkit-animation: move5 2s 1 linear;
+            animation: move5 2s 1 linear;
+    top: 72%;
+    right: 90%;
+  }
+}
+@-webkit-keyframes move1 {
+  0% {
+    top: 55%;
+    right: 103.35%;
+    opacity: 0.3;
+  }
+  100% {
+    top: 80%;
+    right: -15%;
+    left: auto;
+    opacity: 1;
+  }
+}
+@keyframes move1 {
+  0% {
+    top: 55%;
+    right: 103.35%;
+    opacity: 0.3;
+  }
+  100% {
+    top: 80%;
+    right: -15%;
+    left: auto;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes move2 {
+  0% {
+    top: 35%;
+    left: -35%;
+  }
+  100% {
+    left: 25%;
+    top: 78%;
+  }
+}
+@keyframes move2 {
+  0% {
+    top: 35%;
+    left: -35%;
+  }
+  100% {
+    left: 25%;
+    top: 78%;
+  }
+}
+@-webkit-keyframes move5 {
+  0% {
+    top: -16%;
+    right: 90%;
+    opacity: 0.3;
+  }
+  25% {
+    right: 150%;
+  }
+  50% {
+    right: 90%;
+  }
+  75% {
+    right: 150%;
+  }
+  100% {
+    top: 72%;
+    right: 90%;
+    opacity: 1;
+  }
+}
+@keyframes move5 {
+  0% {
+    top: -16%;
+    right: 90%;
+    opacity: 0.3;
+  }
+  25% {
+    right: 150%;
+  }
+  50% {
+    right: 90%;
+  }
+  75% {
+    right: 150%;
+  }
+  100% {
+    top: 72%;
+    right: 90%;
+    opacity: 1;
   }
 }
 .mechanics__wrap {

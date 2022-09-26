@@ -838,6 +838,10 @@
 					left: auto;
 					right: 26px;
 				}
+				&__opacity {
+					width: 100px;
+					height: 48px;
+				}
 			}
 		}
 		&:nth-child(2) {
@@ -873,6 +877,75 @@
 				margin-bottom: 15px;
 			}
 		}
+	}
+	.stocks__item {
+		&:nth-child(1) {
+			&._activeI .stocks__move {
+				animation: move1 0.8s 1 linear;
+				top: 80%;
+				right: -15%;
+				left: auto;
+				opacity: 1;
+			}
+		}
+		&:nth-child(2) {
+			&._activeI .stocks__move {
+				animation: move2 1s 1 linear;
+				left: 25%;
+				top: 78%;
+			}
+		}
+		&:nth-child(4) {
+			&._activeI .stocks__move2 {
+				animation: move5 2s 1 linear;
+				top: 72%;
+				right: 90%;
+			}
+		}
+	}
+}
+@keyframes move1{
+	0% {
+		top: 55%;
+		right: 103.35%;
+		opacity: 0.3;
+	}
+	100% {
+		top: 80%;
+		right: -15%;
+		left: auto;
+		opacity: 1;
+	}
+}
+@keyframes move2{
+	0% {
+		top: 35%;
+		left: -35%;
+	}
+	100% {
+		left: 25%;
+		top: 78%;
+	}
+}
+@keyframes move5{
+	0% {
+		top: -16%;
+		right: 90%;
+		opacity: 0.3;
+	}
+	25% {
+		right: 150%;
+	}
+	50% {
+		right: 90%;
+	}
+	75% {
+		right: 150%;
+	}
+	100% {
+		top: 72%;
+		right: 90%;
+		opacity: 1;
 	}
 }
 
