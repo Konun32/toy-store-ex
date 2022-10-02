@@ -90,9 +90,9 @@ if (buttons.length > 0) {
 		let button = btn.parentElement;
 		let text = button.previousElementSibling;
 		let hidden = text.lastElementChild;
-		let points = text.firstElementChild;
+		//let points = text.firstElementChild;
 		button.classList.toggle('_act');
-		points.classList.toggle('stocks__hidden');
+		//points.classList.toggle('stocks__hidden');
 		hidden.classList.toggle('stocks__hidden');
 	}
 }

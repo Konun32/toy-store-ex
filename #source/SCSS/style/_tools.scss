@@ -1,6 +1,6 @@
 @use "sass:math";
 // TO %
-@function prc($pxOne, $pxTwo) {
+/*@function prc($pxOne, $pxTwo) {
   $result: math.div($pxOne, $pxTwo) * 100%;
   @return $result;
 }
@@ -15,7 +15,7 @@
 @function em($px) {
   $result: math.div($px, 16) + em;
   @return $result;
-}
+}*/
 
 //Адаптивное свойство
 @mixin adaptiv-value($property, $startSize, $minSize, $type) {
